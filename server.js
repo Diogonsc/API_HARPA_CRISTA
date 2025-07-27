@@ -127,6 +127,12 @@ app.get('/hinos/buscar', (req, res) => {
   });
 });
 
+// Hino aleatório
+app.get('/hinos/aleatorio', (req, res) => {
+  const hinoAleatorio = anthems[Math.floor(Math.random() * anthems.length)];
+  res.json(hinoAleatorio);
+});
+
 // Buscar hino por número
 app.get('/hinos/:numero', (req, res) => {
   const numero = parseInt(req.params.numero);
@@ -146,12 +152,6 @@ app.get('/hinos/:numero', (req, res) => {
   }
   
   res.json(hino);
-});
-
-// Hino aleatório
-app.get('/hinos/aleatorio', (req, res) => {
-  const hinoAleatorio = anthems[Math.floor(Math.random() * anthems.length)];
-  res.json(hinoAleatorio);
 });
 
 // Estatísticas dos hinos
