@@ -133,27 +133,6 @@ app.get('/hinos/aleatorio', (req, res) => {
   res.json(hinoAleatorio);
 });
 
-// Buscar hino por número
-app.get('/hinos/:numero', (req, res) => {
-  const numero = parseInt(req.params.numero);
-  
-  if (isNaN(numero)) {
-    return res.status(400).json({ 
-      error: 'Número do hino deve ser um valor numérico' 
-    });
-  }
-  
-  const hino = anthems.find(h => h.number === numero);
-  
-  if (!hino) {
-    return res.status(404).json({ 
-      error: `Hino número ${numero} não encontrado` 
-    });
-  }
-  
-  res.json(hino);
-});
-
 // Estatísticas dos hinos
 app.get('/hinos/estatisticas', (req, res) => {
   const totalHinos = anthems.length;
@@ -198,6 +177,27 @@ app.get('/hinos/estatisticas', (req, res) => {
       totalVersos: hinoMenosVersos.verses.length
     }
   });
+});
+
+// Buscar hino por número
+app.get('/hinos/:numero', (req, res) => {
+  const numero = parseInt(req.params.numero);
+  
+  if (isNaN(numero)) {
+    return res.status(400).json({ 
+      error: 'Número do hino deve ser um valor numérico' 
+    });
+  }
+  
+  const hino = anthems.find(h => h.number === numero);
+  
+  if (!hino) {
+    return res.status(404).json({ 
+      error: `Hino número ${numero} não encontrado` 
+    });
+  }
+  
+  res.json(hino);
 });
 
 // Rota para buscar hinos por autor específico
