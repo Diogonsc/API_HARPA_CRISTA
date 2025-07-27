@@ -1,103 +1,277 @@
-# API da Harpa Cristã 🎵
+# 🎵 API da Harpa Cristã
 
-API REST completa para acessar os 640 hinos da Harpa Cristã, desenvolvida com Node.js e Express.
+Uma API REST completa para acessar e consultar os hinos da Harpa Cristã, desenvolvida em Node.js com Express.
 
-## 🚀 Como executar
+## 📋 Sobre o Projeto
+
+Esta API fornece acesso programático a todos os hinos da Harpa Cristã, permitindo busca por número, título, autor, letra e outras funcionalidades. Ideal para aplicações web, mobile ou qualquer sistema que precise integrar os hinos da Harpa Cristã.
+
+## ✨ Funcionalidades
+
+- 📚 **Acesso completo aos hinos**: Todos os hinos da Harpa Cristã disponíveis via API
+- 🔍 **Busca avançada**: Busca por título, autor ou letra dos hinos
+- 📊 **Estatísticas**: Informações detalhadas sobre a coleção de hinos
+- 🎲 **Hino aleatório**: Retorna um hino aleatório para momentos de inspiração
+- 📄 **Paginação**: Suporte a paginação para listagens grandes
+- 🔄 **CORS habilitado**: Pronto para uso em aplicações web
+- 📱 **API RESTful**: Endpoints bem estruturados e documentados
+
+## 🚀 Instalação e Configuração
 
 ### Pré-requisitos
+
 - Node.js (versão 14 ou superior)
 - NPM ou Yarn
 
 ### Instalação
-```bash
-# Instalar dependências
-npm install
 
-# Executar em modo desenvolvimento
+1. **Clone o repositório**
+```bash
+git clone <url-do-repositorio>
+cd API-Harpa-crista
+```
+
+2. **Instale as dependências**
+```bash
+npm install
+```
+
+3. **Inicie o servidor**
+```bash
+# Modo desenvolvimento (com auto-reload)
 npm run dev
 
-# Executar em produção
+# Modo produção
 npm start
 ```
 
-A API estará disponível em `http://localhost:3000`
+O servidor estará disponível em `http://localhost:3000`
 
-## 📚 Endpoints Disponíveis
+## 📖 Documentação da API
 
-### 1. Informações da API
-```
-GET /
-```
-Retorna informações sobre a API e endpoints disponíveis.
+### Endpoint Principal
 
-### 2. Listar todos os hinos
-```
-GET /hinos
+**GET** `/`
+
+Retorna informações gerais da API e lista de endpoints disponíveis.
+
+```json
+{
+  "message": "API da Harpa Cristã",
+  "version": "1.0.0",
+  "totalHinos": 640,
+  "endpoints": {
+    "/hinos": "Lista todos os hinos",
+    "/hinos/:numero": "Busca hino por número",
+    "/hinos/buscar": "Busca hinos por título ou autor",
+    "/hinos/aleatorio": "Retorna um hino aleatório",
+    "/hinos/estatisticas": "Estatísticas dos hinos"
+  }
+}
 ```
 
-**Parâmetros de query:**
+### Listar Todos os Hinos
+
+**GET** `/hinos`
+
+**Parâmetros de Query:**
 - `page` (opcional): Número da página (padrão: 1)
-- `limit` (opcional): Hinos por página (padrão: 20)
+- `limit` (opcional): Itens por página (padrão: 20)
 - `sort` (opcional): Ordenação (`number`, `title`, `author`)
 
 **Exemplo:**
 ```bash
-curl "http://localhost:3000/hinos?page=1&limit=10&sort=title"
+GET /hinos?page=1&limit=10&sort=title
 ```
 
-### 3. Buscar hino por número
+**Resposta:**
+```json
+{
+  "hinos": [
+    {
+      "_id": { "$oid": "65d722b8fc66c875dc0edfe2" },
+      "title": "Chuvas De Graça",
+      "author": "CPAD / J.R.",
+      "number": 1,
+      "verses": [
+        {
+          "sequence": 1,
+          "lyrics": "Deus prometeu com certeza...",
+          "chorus": false
+        }
+      ]
+    }
+  ],
+  "paginacao": {
+    "pagina": 1,
+    "porPagina": 10,
+    "total": 640,
+    "totalPaginas": 64
+  }
+}
 ```
-GET /hinos/:numero
-```
+
+### Buscar Hino por Número
+
+**GET** `/hinos/:numero`
 
 **Exemplo:**
 ```bash
-curl "http://localhost:3000/hinos/1"
+GET /hinos/1
 ```
 
-### 4. Buscar hinos
-```
-GET /hinos/buscar?q=termo&tipo=todos
+**Resposta:**
+```json
+{
+  "_id": { "$oid": "65d722b8fc66c875dc0edfe2" },
+  "title": "Chuvas De Graça",
+  "author": "CPAD / J.R.",
+  "number": 1,
+  "verses": [...]
+}
 ```
 
-**Parâmetros:**
+### Buscar Hinos
+
+**GET** `/hinos/buscar`
+
+**Parâmetros de Query:**
 - `q` (obrigatório): Termo de busca
-- `tipo` (opcional): Tipo de busca (`todos`, `titulo`, `autor`, `letra`)
+- `tipo` (opcional): Tipo de busca (`titulo`, `autor`, `letra`, `todos`)
+
+**Exemplos:**
+```bash
+# Buscar por título
+GET /hinos/buscar?q=graça&tipo=titulo
+
+# Buscar por autor
+GET /hinos/buscar?q=CPAD&tipo=autor
+
+# Buscar na letra
+GET /hinos/buscar?q=amor&tipo=letra
+
+# Buscar em todos os campos
+GET /hinos/buscar?q=Jesus&tipo=todos
+```
+
+**Resposta:**
+```json
+{
+  "termo": "graça",
+  "tipo": "titulo",
+  "total": 5,
+  "hinos": [...]
+}
+```
+
+### Hino Aleatório
+
+**GET** `/hinos/aleatorio`
+
+Retorna um hino aleatório da coleção.
+
+**Resposta:**
+```json
+{
+  "_id": { "$oid": "..." },
+  "title": "Nome do Hino",
+  "author": "Autor",
+  "number": 123,
+  "verses": [...]
+}
+```
+
+### Estatísticas dos Hinos
+
+**GET** `/hinos/estatisticas`
+
+Retorna estatísticas detalhadas sobre a coleção de hinos.
+
+**Resposta:**
+```json
+{
+  "totalHinos": 640,
+  "totalAutores": 45,
+  "autores": ["CPAD / J.R.", "CPAD / A.N.", ...],
+  "mediaVersosPorHino": 4.2,
+  "totalVersos": 2688,
+  "totalRefroes": 320,
+  "hinoComMaisVersos": {
+    "numero": 123,
+    "titulo": "Nome do Hino",
+    "totalVersos": 8
+  },
+  "hinoComMenosVersos": {
+    "numero": 456,
+    "titulo": "Nome do Hino",
+    "totalVersos": 2
+  }
+}
+```
+
+### Buscar Hinos por Autor
+
+**GET** `/hinos/autor/:autor`
 
 **Exemplo:**
 ```bash
-curl "http://localhost:3000/hinos/buscar?q=graça&tipo=letra"
+GET /hinos/autor/CPAD
 ```
 
-### 5. Hino aleatório
-```
-GET /hinos/aleatorio
+**Resposta:**
+```json
+{
+  "autor": "CPAD",
+  "total": 25,
+  "hinos": [...]
+}
 ```
 
-### 6. Estatísticas
-```
-GET /hinos/estatisticas
-```
+### Buscar Hinos por Faixa de Números
 
-### 7. Buscar por autor
-```
-GET /hinos/autor/:autor
-```
+**GET** `/hinos/faixa/:inicio/:fim`
 
 **Exemplo:**
 ```bash
-curl "http://localhost:3000/hinos/autor/CPAD"
+GET /hinos/faixa/1/10
 ```
 
-### 8. Buscar por faixa de números
-```
-GET /hinos/faixa/:inicio/:fim
+**Resposta:**
+```json
+{
+  "faixa": "1 - 10",
+  "total": 10,
+  "hinos": [...]
+}
 ```
 
-**Exemplo:**
+## 🧪 Testando a API
+
+O projeto inclui um script de teste para verificar se a API está funcionando corretamente:
+
 ```bash
-curl "http://localhost:3000/hinos/faixa/1/10"
+node test-api.js
 ```
+
+Este script testa todos os principais endpoints e exibe os resultados no console.
+
+## 📁 Estrutura do Projeto
+
+```
+API-Harpa-crista/
+├── server.js          # Servidor Express principal
+├── anthems.json       # Dados dos hinos (JSON)
+├── test-api.js        # Script de teste da API
+├── package.json       # Dependências e scripts
+└── README.md          # Este arquivo
+```
+
+## 🔧 Tecnologias Utilizadas
+
+- **Node.js**: Runtime JavaScript
+- **Express**: Framework web para APIs
+- **JSON**: Formato de dados dos hinos
+- **CORS**: Middleware para Cross-Origin Resource Sharing
 
 ## 📊 Estrutura dos Dados
 
@@ -105,70 +279,55 @@ Cada hino possui a seguinte estrutura:
 
 ```json
 {
-  "_id": "65d722b8fc66c875dc0edfe2",
-  "title": "Chuvas De Graça",
+  "_id": { "$oid": "..." },
+  "title": "Título do Hino",
+  "author": "Autor do Hino",
+  "number": 1,
   "verses": [
     {
       "sequence": 1,
-      "lyrics": "Deus prometeu com certeza\nChuvas de graça mandar;",
+      "lyrics": "Letra do verso...",
       "chorus": false
     }
-  ],
-  "author": "CPAD / J.R.",
-  "number": 1
+  ]
 }
 ```
 
-## 🔍 Exemplos de Uso
+## 🚀 Deploy
 
-### Buscar hinos que contenham "amor" na letra
+### Variáveis de Ambiente
+
+- `PORT`: Porta do servidor (padrão: 3000)
+
+### Exemplo de Deploy
+
 ```bash
-curl "http://localhost:3000/hinos/buscar?q=amor&tipo=letra"
+# Definir porta (opcional)
+export PORT=8080
+
+# Iniciar servidor
+npm start
 ```
-
-### Listar primeiros 5 hinos ordenados por título
-```bash
-curl "http://localhost:3000/hinos?limit=5&sort=title"
-```
-
-### Buscar hinos do autor "CPAD"
-```bash
-curl "http://localhost:3000/hinos/autor/CPAD"
-```
-
-### Obter estatísticas completas
-```bash
-curl "http://localhost:3000/hinos/estatisticas"
-```
-
-## 🌟 Funcionalidades
-
-- ✅ **640 hinos** da Harpa Cristã
-- ✅ **Busca por número** específico
-- ✅ **Busca por título, autor ou letra**
-- ✅ **Paginação** para listagem
-- ✅ **Ordenação** por número, título ou autor
-- ✅ **Hino aleatório**
-- ✅ **Estatísticas** completas
-- ✅ **Busca por autor** específico
-- ✅ **Busca por faixa** de números
-- ✅ **CORS habilitado** para uso em frontend
-- ✅ **Tratamento de erros** robusto
-
-## 🛠️ Tecnologias
-
-- **Node.js** - Runtime JavaScript
-- **Express.js** - Framework web
-- **JSON** - Armazenamento de dados
-
-## 📝 Licença
-
-Este projeto é de uso livre para fins educacionais e religiosos.
 
 ## 🤝 Contribuição
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📄 Licença
+
+Este projeto está sob a licença ISC. Veja o arquivo `package.json` para mais detalhes.
+
+## 📞 Suporte
+
+Para dúvidas, sugestões ou problemas:
+
+- Abra uma issue no repositório
+- Entre em contato através dos canais oficiais
 
 ---
 
-**Desenvolvido com ❤️ para a comunidade cristã** # API_HARPA_CRISTA
+**Desenvolvido com ❤️ para a comunidade cristã**
