@@ -260,7 +260,7 @@ Este script testa todos os principais endpoints e exibe os resultados no console
 ```
 API-Harpa-crista/
 ├── server.js          # Servidor Express principal
-├── anthems.json       # Dados dos hinos (JSON)
+├── hinos.json       # Dados dos hinos (JSON)
 ├── test-api.js        # Script de teste da API
 ├── package.json       # Dependências e scripts
 └── README.md          # Este arquivo

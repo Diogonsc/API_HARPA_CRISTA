@@ -21,15 +21,15 @@ app.use((req, res, next) => {
 });
 
 // Carregar dados dos hinos
-let anthems = [];
+let hinos = [];
 try {
-  const data = fs.readFileSync(path.join(__dirname, 'anthems.json'), 'utf8');
-  anthems = JSON.parse(data);
-  console.log(`✅ ${anthems.length} hinos carregados com sucesso`);
+  const data = fs.readFileSync(path.join(__dirname, 'hinos.json'), 'utf8');
+  hinos = JSON.parse(data);
+  console.log(`✅ ${hinos.length} hinos carregados com sucesso`);
 } catch (error) {
-  console.error('❌ Erro ao carregar anthems.json:', error);
+  console.error('❌ Erro ao carregar hinos.json:', error);
   // Em caso de erro, inicializar com array vazio para evitar crashes
-  anthems = [];
+  hinos = [];
 }
 
 // Rota principal
@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
   res.json({
     message: 'API da Harpa Cristã',
     version: '1.0.0',
-    totalHinos: anthems.length,
+    totalHinos: hinos.length,
     endpoints: {
       '/hinos': 'Lista todos os hinos',
       '/hinos/:numero': 'Busca hino por número',
@@ -55,27 +55,27 @@ app.get('/hinos', (req, res) => {
   const limitNum = parseInt(limit);
   
   // Ordenar hinos
-  let sortedAnthems = [...anthems];
+  let sortedhinos = [...hinos];
   if (sort === 'title') {
-    sortedAnthems.sort((a, b) => a.title.localeCompare(b.title));
+    sortedhinos.sort((a, b) => a.title.localeCompare(b.title));
   } else if (sort === 'author') {
-    sortedAnthems.sort((a, b) => a.author.localeCompare(b.author));
+    sortedhinos.sort((a, b) => a.author.localeCompare(b.author));
   } else {
-    sortedAnthems.sort((a, b) => a.number - b.number);
+    sortedhinos.sort((a, b) => a.number - b.number);
   }
   
   // Paginação
   const startIndex = (pageNum - 1) * limitNum;
   const endIndex = startIndex + limitNum;
-  const paginatedAnthems = sortedAnthems.slice(startIndex, endIndex);
+  const paginatedhinos = sortedhinos.slice(startIndex, endIndex);
   
   res.json({
-    hinos: paginatedAnthems,
+    hinos: paginatedhinos,
     paginacao: {
       pagina: pageNum,
       porPagina: limitNum,
-      total: anthems.length,
-      totalPaginas: Math.ceil(anthems.length / limitNum)
+      total: hinos.length,
+      totalPaginas: Math.ceil(hinos.length / limitNum)
     }
   });
 });
@@ -94,21 +94,21 @@ app.get('/hinos/buscar', (req, res) => {
   let resultados = [];
   
   if (tipo === 'titulo' || tipo === 'todos') {
-    const porTitulo = anthems.filter(h => 
+    const porTitulo = hinos.filter(h => 
       h.title.toLowerCase().includes(termo)
     );
     resultados.push(...porTitulo);
   }
   
   if (tipo === 'autor' || tipo === 'todos') {
-    const porAutor = anthems.filter(h => 
+    const porAutor = hinos.filter(h => 
       h.author.toLowerCase().includes(termo)
     );
     resultados.push(...porAutor);
   }
   
   if (tipo === 'letra' || tipo === 'todos') {
-    const porLetra = anthems.filter(h => 
+    const porLetra = hinos.filter(h => 
       h.verses.some(v => v.lyrics.toLowerCase().includes(termo))
     );
     resultados.push(...porLetra);
@@ -129,33 +129,33 @@ app.get('/hinos/buscar', (req, res) => {
 
 // Hino aleatório
 app.get('/hinos/aleatorio', (req, res) => {
-  const hinoAleatorio = anthems[Math.floor(Math.random() * anthems.length)];
+  const hinoAleatorio = hinos[Math.floor(Math.random() * hinos.length)];
   res.json(hinoAleatorio);
 });
 
 // Estatísticas dos hinos
 app.get('/hinos/estatisticas', (req, res) => {
-  const totalHinos = anthems.length;
+  const totalHinos = hinos.length;
   
   // Contar autores únicos
-  const autores = [...new Set(anthems.map(h => h.author))];
+  const autores = [...new Set(hinos.map(h => h.author))];
   
   // Hino com mais versos
-  const hinoMaisVersos = anthems.reduce((max, hino) => 
+  const hinoMaisVersos = hinos.reduce((max, hino) => 
     hino.verses.length > max.verses.length ? hino : max
   );
   
   // Hino com menos versos
-  const hinoMenosVersos = anthems.reduce((min, hino) => 
+  const hinoMenosVersos = hinos.reduce((min, hino) => 
     hino.verses.length < min.verses.length ? hino : min
   );
   
   // Média de versos por hino
-  const totalVersos = anthems.reduce((sum, hino) => sum + hino.verses.length, 0);
+  const totalVersos = hinos.reduce((sum, hino) => sum + hino.verses.length, 0);
   const mediaVersos = (totalVersos / totalHinos).toFixed(2);
   
   // Contar refrões
-  const totalRefroes = anthems.reduce((sum, hino) => 
+  const totalRefroes = hinos.reduce((sum, hino) => 
     sum + hino.verses.filter(v => v.chorus).length, 0
   );
   
@@ -189,7 +189,7 @@ app.get('/hinos/:numero', (req, res) => {
     });
   }
   
-  const hino = anthems.find(h => h.number === numero);
+  const hino = hinos.find(h => h.number === numero);
   
   if (!hino) {
     return res.status(404).json({ 
@@ -203,7 +203,7 @@ app.get('/hinos/:numero', (req, res) => {
 // Rota para buscar hinos por autor específico
 app.get('/hinos/autor/:autor', (req, res) => {
   const autor = req.params.autor.toLowerCase();
-  const hinosDoAutor = anthems.filter(h => 
+  const hinosDoAutor = hinos.filter(h => 
     h.author.toLowerCase().includes(autor)
   );
   
@@ -231,7 +231,7 @@ app.get('/hinos/faixa/:inicio/:fim', (req, res) => {
     });
   }
   
-  const hinosNaFaixa = anthems.filter(h => 
+  const hinosNaFaixa = hinos.filter(h => 
     h.number >= inicio && h.number <= fim
   );
   
@@ -262,6 +262,6 @@ app.use((err, req, res, next) => {
 // Iniciar servidor
 app.listen(PORT, () => {
   console.log(`🚀 API da Harpa Cristã rodando na porta ${PORT}`);
-  console.log(`📊 Total de hinos carregados: ${anthems.length}`);
+  console.log(`📊 Total de hinos carregados: ${hinos.length}`);
   console.log(`🌐 Acesse: http://localhost:${PORT}`);
 }); 
