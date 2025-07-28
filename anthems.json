@@ -33,7 +33,7 @@
     ],
     "author": "CPAD / J.R.",
     "number": 1,
-    "audio": "https://www.youtube.com/watch?v=QXX-O1U2ufY&list=PLzWjmBOf3rY3hAXmvMI1-W52a23u-3U4o"
+    "audio": "audio/1 - Chuvas De Graça.mp3"
   },
   {
     "_id": {
@@ -64,7 +64,7 @@
     ],
     "author": "CPAD / A.N.",
     "number": 2,
-    "audio": "https://www.youtube.com/watch?v=Gyswv5Mat2A&list=PLzWjmBOf3rY3hAXmvMI1-W52a23u-3U4o&index=2"
+    "audio": "audio/2 - Saudosa Lembrança.mp3"
   },
   {
     "_id": {
@@ -100,7 +100,7 @@
     ],
     "author": "CPAD / A.N.",
     "number": 3,
-    "audio": "https://www.youtube.com/watch?v=KpcPiE-ihFw&list=PLzWjmBOf3rY3hAXmvMI1-W52a23u-3U4o&index=3"
+    "audio": "audio/3 - Plena Paz.mp3"
   },
   {
     "_id": {
@@ -141,7 +141,7 @@
     ],
     "author": "CPAD / ***",
     "number": 4,
-    "audio": "https://www.youtube.com/watch?v=pjOawdGD7mE&list=PLzWjmBOf3rY3hAXmvMI1-W52a23u-3U4o&index=4"
+    "audio": "audio/4 - Deus Velará Por Ti.mp3"
   },
   {
     "_id": {
@@ -172,7 +172,7 @@
     ],
     "author": "CPAD / J.R.",
     "number": 5,
-    "audio": "https://www.youtube.com/watch?v=CRb3zmcgvPI&list=PLzWjmBOf3rY3hAXmvMI1-W52a23u-3U4o&index=5"
+    "audio": "audio/5 - Ó Desce, Fogo Santo.mp3"
   },
   {
     "_id": {
@@ -208,7 +208,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 6,
-    "audio": "https://www.youtube.com/watch?v=L2W9Dx7w2uM&list=PLzWjmBOf3rY3hAXmvMI1-W52a23u-3U4o&index=6"
+    "audio": "audio/6 - Na Maldição Da Cruz.mp3"
   },
   {
     "_id": {
@@ -244,7 +244,7 @@
     ],
     "author": "CPAD / ***",
     "number": 7,
-    "audio": ""
+    "audio": "audio/7 - Cristo Cura, Sim!.mp3"
   },
   {
     "_id": {
@@ -285,7 +285,7 @@
     ],
     "author": "CPAD / J.R.",
     "number": 8,
-    "audio": ""
+    "audio": "audio/8 - Cristo, O Fiel Amigo.mp3"
   },
   {
     "_id": {
@@ -321,7 +321,7 @@
     ],
     "author": "CPAD / ***",
     "number": 9,
-    "audio": ""
+    "audio": "audio/9 - Marchai, Soldados De Cristo.mp3"
   },
   {
     "_id": {
@@ -357,7 +357,7 @@
     ],
     "author": "CPAD / A.N.",
     "number": 10,
-    "audio": ""
+    "audio": "audio/10 - Eu Te Louvo.mp3"
   },
   {
     "_id": {
@@ -398,7 +398,7 @@
     ],
     "author": "CPAD / A.T.S.",
     "number": 11,
-    "audio": ""
+    "audio": "audio/11 - Ó Cristão; Eia Avante.mp3"
   },
   {
     "_id": {
@@ -434,7 +434,7 @@
     ],
     "author": "CPAD / A.S.",
     "number": 12,
-    "audio": ""
+    "audio": "audio/12 - Vem Já Pecador.mp3"
   },
   {
     "_id": {
@@ -470,7 +470,7 @@
     ],
     "author": "CPAD / S.N.",
     "number": 13,
-    "audio": ""
+    "audio": "audio/13 - Jesus Comprou-me.mp3"
   },
   {
     "_id": {
@@ -506,7 +506,7 @@
     ],
     "author": "CPAD / J.J.S.",
     "number": 14,
-    "audio": ""
+    "audio": "audio/14 - Gozo Em Jesus.mp3"
   },
   {
     "_id": {
@@ -542,7 +542,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 15,
-    "audio": ""
+    "audio": "audio/15 - Conversão.mp3"
   },
   {
     "_id": {
@@ -583,7 +583,7 @@
     ],
     "author": "CPAD / S.L.",
     "number": 16,
-    "audio": ""
+    "audio": "audio/16 - Despertar Para O Trabalho.mp3"
   },
   {
     "_id": {
@@ -614,7 +614,7 @@
     ],
     "author": "CPAD / ***",
     "number": 17,
-    "audio": ""
+    "audio": "audio/17 - Pensando Em Jesus.mp3"
   },
   {
     "_id": {
@@ -645,7 +645,7 @@
     ],
     "author": "CPAD / A.S.",
     "number": 18,
-    "audio": ""
+    "audio": "audio/18 - Grata Nova.mp3"
   },
   {
     "_id": {
@@ -686,7 +686,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 19,
-    "audio": ""
+    "audio": "audio/19 - O Convite De Cristo.mp3"
   },
   {
     "_id": {
@@ -722,7 +722,7 @@
     ],
     "author": "CPAD / H.E.N.",
     "number": 20,
-    "audio": ""
+    "audio": "audio/20 - Olhai P'ra O Cordeiro De Deus.mp3"
   },
   {
     "_id": {
@@ -753,7 +753,7 @@
     ],
     "author": "CPAD / O.N.",
     "number": 21,
-    "audio": ""
+    "audio": "audio/21 - Gloriosa Aurora.mp3"
   },
   {
     "_id": {
@@ -789,7 +789,7 @@
     ],
     "author": "CPAD / J.B.C.",
     "number": 22,
-    "audio": ""
+    "audio": "audio/22 - Ceia Do Senhor.mp3"
   },
   {
     "_id": {
@@ -830,7 +830,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 23,
-    "audio": ""
+    "audio": "audio/23 - Glória A Jesus.mp3"
   },
   {
     "_id": {
@@ -866,7 +866,7 @@
     ],
     "author": "CPAD / A.S.",
     "number": 24,
-    "audio": ""
+    "audio": "audio/24 - Poder Pentecostal.mp3"
   },
   {
     "_id": {
@@ -897,7 +897,7 @@
     ],
     "author": "CPAD / J.Car.",
     "number": 25,
-    "audio": ""
+    "audio": "audio/25 - Jesus Tu És Bom.mp3"
   },
   {
     "_id": {
@@ -928,7 +928,7 @@
     ],
     "author": "CPAD / E.C.",
     "number": 26,
-    "audio": ""
+    "audio": "audio/26 - A Formosa Jerusalém.mp3"
   },
   {
     "_id": {
@@ -959,7 +959,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 27,
-    "audio": ""
+    "audio": "audio/27 - Amor Que Vence.mp3"
   },
   {
     "_id": {
@@ -990,7 +990,7 @@
     ],
     "author": "CPAD / F.V.",
     "number": 28,
-    "audio": ""
+    "audio": "audio/28 - Deus Vai Te Guiar.mp3"
   },
   {
     "_id": {
@@ -1041,7 +1041,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 29,
-    "audio": ""
+    "audio": "audio/29 - O Precioso Sangue.mp3"
   },
   {
     "_id": {
@@ -1077,7 +1077,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 30,
-    "audio": ""
+    "audio": "audio/30 - Não Sou Meu.mp3"
   },
   {
     "_id": {
@@ -1113,7 +1113,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 31,
-    "audio": ""
+    "audio": "audio/31 - Glória Ao Meu Jesus.mp3"
   },
   {
     "_id": {
@@ -1159,7 +1159,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 32,
-    "audio": ""
+    "audio": "audio/32 - Meu Cristo! Meu Cristo!.mp3"
   },
   {
     "_id": {
@@ -1195,7 +1195,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 33,
-    "audio": ""
+    "audio": "audio/33 - Com Tua Mão Segura.mp3"
   },
   {
     "_id": {
@@ -1221,7 +1221,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 34,
-    "audio": ""
+    "audio": "audio/34 - Milícia De Jesus.mp3"
   },
   {
     "_id": {
@@ -1257,7 +1257,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 35,
-    "audio": ""
+    "audio": "audio/35 - O Grande Amor.mp3"
   },
   {
     "_id": {
@@ -1288,7 +1288,7 @@
     ],
     "author": "CPAD / J.H.N.",
     "number": 36,
-    "audio": ""
+    "audio": "audio/36 - O Exilado.mp3"
   },
   {
     "_id": {
@@ -1319,7 +1319,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 37,
-    "audio": ""
+    "audio": "audio/37 - Cristo P'ra Mim.mp3"
   },
   {
     "_id": {
@@ -1350,7 +1350,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 38,
-    "audio": ""
+    "audio": "audio/38 - O Senhor É Rei.mp3"
   },
   {
     "_id": {
@@ -1381,7 +1381,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 39,
-    "audio": ""
+    "audio": "audio/39 - Alvo Mais Que A Neve.mp3"
   },
   {
     "_id": {
@@ -1422,7 +1422,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 40,
-    "audio": ""
+    "audio": "audio/40 - A Cidade Do Bom Deus.mp3"
   },
   {
     "_id": {
@@ -1453,7 +1453,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 41,
-    "audio": ""
+    "audio": "audio/41 - A Cristo Coroai.mp3"
   },
   {
     "_id": {
@@ -1484,7 +1484,7 @@
     ],
     "author": "CPAD / J.H.N.",
     "number": 42,
-    "audio": ""
+    "audio": "audio/42 - Saudai Jesus.mp3"
   },
   {
     "_id": {
@@ -1520,7 +1520,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 43,
-    "audio": ""
+    "audio": "audio/43 - Doce Lar.mp3"
   },
   {
     "_id": {
@@ -1556,7 +1556,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 44,
-    "audio": ""
+    "audio": "audio/44 - Oh! Que Glória.mp3"
   },
   {
     "_id": {
@@ -1602,7 +1602,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 45,
-    "audio": ""
+    "audio": "audio/45 - Redentor Onipotente.mp3"
   },
   {
     "_id": {
@@ -1638,7 +1638,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 46,
-    "audio": ""
+    "audio": "audio/46 - Um Pendão Real.mp3"
   },
   {
     "_id": {
@@ -1669,7 +1669,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 47,
-    "audio": ""
+    "audio": "audio/47 - Rocha Eterna.mp3"
   },
   {
     "_id": {
@@ -1705,7 +1705,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 48,
-    "audio": ""
+    "audio": "audio/48 - O Dia Do Triunfo De Jesus.mp3"
   },
   {
     "_id": {
@@ -1741,7 +1741,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 49,
-    "audio": ""
+    "audio": "audio/49 - Aleluia! Já Creio.mp3"
   },
   {
     "_id": {
@@ -1777,7 +1777,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 50,
-    "audio": ""
+    "audio": "audio/50 - Sempre Fiéis.mp3"
   },
   {
     "_id": {
@@ -1808,7 +1808,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 51,
-    "audio": ""
+    "audio": "audio/51 - Adoração Reconhecida.mp3"
   },
   {
     "_id": {
@@ -1844,7 +1844,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 52,
-    "audio": ""
+    "audio": "audio/52 - Tudo Está Bem.mp3"
   },
   {
     "_id": {
@@ -1880,7 +1880,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 53,
-    "audio": ""
+    "audio": "audio/53 - A Esperança Da Igreja.mp3"
   },
   {
     "_id": {
@@ -1916,7 +1916,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 54,
-    "audio": ""
+    "audio": "audio/54 - Louvemos Ao Redentor.mp3"
   },
   {
     "_id": {
@@ -1947,7 +1947,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 55,
-    "audio": ""
+    "audio": "audio/55 - Mais Perto Da Tua Cruz.mp3"
   },
   {
     "_id": {
@@ -1983,7 +1983,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 56,
-    "audio": ""
+    "audio": "audio/56 - Tudo Em Cristo.mp3"
   },
   {
     "_id": {
@@ -2014,7 +2014,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 57,
-    "audio": ""
+    "audio": "audio/57 - Vivifica-nos Senhor.mp3"
   },
   {
     "_id": {
@@ -2045,7 +2045,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 58,
-    "audio": ""
+    "audio": "audio/58 - Não Temas.mp3"
   },
   {
     "_id": {
@@ -2081,7 +2081,7 @@
     ],
     "author": "CPAD / F.V.",
     "number": 59,
-    "audio": ""
+    "audio": "audio/59 - Eu Creio, Sim.mp3"
   },
   {
     "_id": {
@@ -2112,7 +2112,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 60,
-    "audio": ""
+    "audio": "audio/60 - Exultação Do Crente.mp3"
   },
   {
     "_id": {
@@ -2148,7 +2148,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 61,
-    "audio": ""
+    "audio": "audio/61 - Deus Tomará Conta De Ti.mp3"
   },
   {
     "_id": {
@@ -2174,7 +2174,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 62,
-    "audio": ""
+    "audio": "audio/62 - Achei Jesus.mp3"
   },
   {
     "_id": {
@@ -2205,7 +2205,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 63,
-    "audio": ""
+    "audio": "audio/63 - Acordai, Acordai.mp3"
   },
   {
     "_id": {
@@ -2241,7 +2241,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 64,
-    "audio": ""
+    "audio": "audio/64 - De Todo O Mundo: Aleluia!.mp3"
   },
   {
     "_id": {
@@ -2277,7 +2277,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 65,
-    "audio": ""
+    "audio": "audio/65 - Quem Irá?.mp3"
   },
   {
     "_id": {
@@ -2303,7 +2303,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 66,
-    "audio": ""
+    "audio": "audio/66 - Pronto A Salvar.mp3"
   },
   {
     "_id": {
@@ -2334,7 +2334,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 67,
-    "audio": ""
+    "audio": "audio/67 - Quem Quer Ir Com Cristo?.mp3"
   },
   {
     "_id": {
@@ -2370,7 +2370,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 68,
-    "audio": ""
+    "audio": "audio/68 - Gozo De Ter Salvação.mp3"
   },
   {
     "_id": {
@@ -2406,7 +2406,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 69,
-    "audio": ""
+    "audio": "audio/69 - Jesus Quebrou Os Meus Grilhões.mp3"
   },
   {
     "_id": {
@@ -2442,7 +2442,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 70,
-    "audio": ""
+    "audio": "audio/70 - Cristo Jesus Vai Voltar.mp3"
   },
   {
     "_id": {
@@ -2473,7 +2473,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 71,
-    "audio": ""
+    "audio": "audio/71 - Santo És Tu, Senhor.mp3"
   },
   {
     "_id": {
@@ -2499,7 +2499,7 @@
     ],
     "author": "CPAD / ***",
     "number": 72,
-    "audio": ""
+    "audio": "audio/72 - Rasgou-se O Véu.mp3"
   },
   {
     "_id": {
@@ -2535,7 +2535,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 73,
-    "audio": ""
+    "audio": "audio/73 - Vem, Vem A Mim.mp3"
   },
   {
     "_id": {
@@ -2566,7 +2566,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 74,
-    "audio": ""
+    "audio": "audio/74 - Cristo Virá.mp3"
   },
   {
     "_id": {
@@ -2597,7 +2597,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 75,
-    "audio": ""
+    "audio": "audio/75 - Em Jesus Tens A Palma Da Vitória.mp3"
   },
   {
     "_id": {
@@ -2628,7 +2628,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 76,
-    "audio": ""
+    "audio": "audio/76 - Vem, Ó Prodigo.mp3"
   },
   {
     "_id": {
@@ -2664,7 +2664,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 77,
-    "audio": ""
+    "audio": "audio/77 - Guarda O Contacto.mp3"
   },
   {
     "_id": {
@@ -2700,7 +2700,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 78,
-    "audio": ""
+    "audio": "audio/78 - Meu Forte Redentor.mp3"
   },
   {
     "_id": {
@@ -2731,7 +2731,7 @@
     ],
     "author": "CPAD / G.V.",
     "number": 79,
-    "audio": ""
+    "audio": "audio/79 - Sua Graça Me Basta.mp3"
   },
   {
     "_id": {
@@ -2767,7 +2767,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 80,
-    "audio": ""
+    "audio": "audio/80 - Cristo Te Chama.mp3"
   },
   {
     "_id": {
@@ -2803,7 +2803,7 @@
     ],
     "author": "CPAD / E.J.",
     "number": 81,
-    "audio": ""
+    "audio": "audio/81 - Pode Salvar.mp3"
   },
   {
     "_id": {
@@ -2839,7 +2839,7 @@
     ],
     "author": "CPAD / S.N.",
     "number": 82,
-    "audio": ""
+    "audio": "audio/82 - Um Meigo Salvador.mp3"
   },
   {
     "_id": {
@@ -2870,7 +2870,7 @@
     ],
     "author": "CPAD / S.N.",
     "number": 83,
-    "audio": ""
+    "audio": "audio/83 - Não Posso Explicar.mp3"
   },
   {
     "_id": {
@@ -2911,7 +2911,7 @@
     ],
     "author": "CPAD / J.R.",
     "number": 84,
-    "audio": ""
+    "audio": "audio/84 - O Grande \"Eu Sou\".mp3"
   },
   {
     "_id": {
@@ -2942,7 +2942,7 @@
     ],
     "author": "CPAD / F.V.",
     "number": 85,
-    "audio": ""
+    "audio": "audio/85 - Deixai Entrar O Espírito De Deus.mp3"
   },
   {
     "_id": {
@@ -2973,7 +2973,7 @@
     ],
     "author": "CPAD / ***",
     "number": 86,
-    "audio": ""
+    "audio": "audio/86 - Satisfeito Com Cristo.mp3"
   },
   {
     "_id": {
@@ -3019,7 +3019,7 @@
     ],
     "author": "CPAD / S.N.",
     "number": 87,
-    "audio": ""
+    "audio": "audio/87 - Meu Testemunho.mp3"
   },
   {
     "_id": {
@@ -3055,7 +3055,7 @@
     ],
     "author": "CPAD / ***",
     "number": 88,
-    "audio": ""
+    "audio": "audio/88 - Revela A Nós, Senhor.mp3"
   },
   {
     "_id": {
@@ -3096,7 +3096,7 @@
     ],
     "author": "CPAD / M.S.B.",
     "number": 89,
-    "audio": ""
+    "audio": "audio/89 - Sublime E Grande Amor.mp3"
   },
   {
     "_id": {
@@ -3127,7 +3127,7 @@
     ],
     "author": "CPAD / A.T.G.",
     "number": 90,
-    "audio": ""
+    "audio": "audio/90 - Há Paz E Alegria.mp3"
   },
   {
     "_id": {
@@ -3163,7 +3163,7 @@
     ],
     "author": "CPAD / J.H.N.",
     "number": 91,
-    "audio": ""
+    "audio": "audio/91 - Nívea Luz.mp3"
   },
   {
     "_id": {
@@ -3199,7 +3199,7 @@
     ],
     "author": "CPAD / S.N.",
     "number": 92,
-    "audio": ""
+    "audio": "audio/92 - O Bondoso Salvador.mp3"
   },
   {
     "_id": {
@@ -3235,7 +3235,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 93,
-    "audio": ""
+    "audio": "audio/93 - Há Trabalho Pronto.mp3"
   },
   {
     "_id": {
@@ -3271,7 +3271,7 @@
     ],
     "author": "CPAD / O.N.",
     "number": 94,
-    "audio": ""
+    "audio": "audio/94 - Na Jerusalém De Deus.mp3"
   },
   {
     "_id": {
@@ -3302,7 +3302,7 @@
     ],
     "author": "CPAD / J.F.",
     "number": 95,
-    "audio": ""
+    "audio": "audio/95 - Ouve, Ó Pecador.mp3"
   },
   {
     "_id": {
@@ -3338,7 +3338,7 @@
     ],
     "author": "CPAD / J.R.",
     "number": 96,
-    "audio": ""
+    "audio": "audio/96 - Deixa Penetrar A Luz.mp3"
   },
   {
     "_id": {
@@ -3369,7 +3369,7 @@
     ],
     "author": "CPAD / F.V.",
     "number": 97,
-    "audio": ""
+    "audio": "audio/97 - Há Um Caminho Santo.mp3"
   },
   {
     "_id": {
@@ -3410,7 +3410,7 @@
     ],
     "author": "CPAD / A.S.",
     "number": 98,
-    "audio": ""
+    "audio": "audio/98 - Estarás Vigiando?.mp3"
   },
   {
     "_id": {
@@ -3446,7 +3446,7 @@
     ],
     "author": "CPAD / H.M.W.",
     "number": 99,
-    "audio": ""
+    "audio": "audio/99 - Eis O Dia A Declinar.mp3"
   },
   {
     "_id": {
@@ -3482,7 +3482,7 @@
     ],
     "author": "CPAD / P.L.M.",
     "number": 100,
-    "audio": ""
+    "audio": "audio/100 - O Bom Consolador.mp3"
   },
   {
     "_id": {
