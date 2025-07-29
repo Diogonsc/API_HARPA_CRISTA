@@ -24,11 +24,9 @@ app.use('/audio', express.static(path.join(__dirname, 'audio')));
 
 // Importar rotas
 const hinosRoutes = require('./routes/hinos');
-const audiosRoutes = require('./routes/audios');
 
 // Usar rotas
-app.use('/hinos', hinosRoutes);
-app.use('/audios', audiosRoutes);
+app.use('/api/hinos', hinosRoutes);
 
 // Rota principal
 app.get('/', (req, res) => {
@@ -36,14 +34,13 @@ app.get('/', (req, res) => {
     message: 'API da Harpa Cristã',
     version: '1.0.0',
     endpoints: {
-      '/hinos': 'Lista todos os hinos',
-      '/hinos/:numero': 'Busca hino por número',
-      '/hinos/buscar': 'Busca hinos por título ou autor',
-      '/hinos/aleatorio': 'Retorna um hino aleatório',
-      '/hinos/estatisticas': 'Estatísticas dos hinos',
-      '/audios': 'Lista todos os arquivos de áudio disponíveis',
-      '/audios/hino/:numero': 'Busca áudio por número do hino',
-      '/audios/aleatorio': 'Retorna um áudio aleatório',
+      '/api/hinos': 'Lista todos os hinos',
+      '/api/hinos/:numero': 'Busca hino por número',
+      '/api/hinos/buscar': 'Busca hinos por título ou autor',
+      '/api/hinos/aleatorio': 'Retorna um hino aleatório',
+      '/api/hinos/estatisticas': 'Estatísticas dos hinos',
+      '/api/hinos/autor/:autor': 'Busca hinos por autor',
+      '/api/hinos/faixa/:inicio/:fim': 'Busca hinos por faixa de números',
       '/audio/:filename': 'Acesso direto aos arquivos de áudio'
     }
   });

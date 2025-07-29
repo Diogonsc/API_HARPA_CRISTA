@@ -14,7 +14,7 @@ try {
   hinos = [];
 }
 
-const { adicionarUrlAudio } = require('../utils/helpers');
+
 
 // Listar todos os hinos
 router.get('/', (req, res) => {
@@ -38,8 +38,8 @@ router.get('/', (req, res) => {
   const hinosComAudio = paginatedhinos.map(hino => {
     const hinoComAudio = { ...hino };
     if (hinoComAudio.audio) {
-      const baseUrl = `${req.protocol}://${req.get('host')}`;
-      hinoComAudio.audioUrl = `${baseUrl}/${hinoComAudio.audio}`;
+      hinoComAudio.audioUrl = hinoComAudio.audio;
+      delete hinoComAudio.audio;
     }
     return hinoComAudio;
   });
@@ -96,8 +96,8 @@ router.get('/buscar', (req, res) => {
   const hinosComAudio = hinosUnicos.map(hino => {
     const hinoComAudio = { ...hino };
     if (hinoComAudio.audio) {
-      const baseUrl = `${req.protocol}://${req.get('host')}`;
-      hinoComAudio.audioUrl = `${baseUrl}/${hinoComAudio.audio}`;
+      hinoComAudio.audioUrl = hinoComAudio.audio;
+      delete hinoComAudio.audio;
     }
     return hinoComAudio;
   });
@@ -113,10 +113,9 @@ router.get('/buscar', (req, res) => {
 // Hino aleatório
 router.get('/aleatorio', (req, res) => {
   const hinoAleatorio = { ...hinos[Math.floor(Math.random() * hinos.length)] };
-  
   if (hinoAleatorio.audio) {
-    const baseUrl = `${req.protocol}://${req.get('host')}`;
-    hinoAleatorio.audioUrl = `${baseUrl}/${hinoAleatorio.audio}`;
+    hinoAleatorio.audioUrl = hinoAleatorio.audio;
+    delete hinoAleatorio.audio;
   }
   
   res.json(hinoAleatorio);
@@ -186,8 +185,8 @@ router.get('/:numero', (req, res) => {
   
   const hinoComAudio = { ...hino };
   if (hinoComAudio.audio) {
-    const baseUrl = `${req.protocol}://${req.get('host')}`;
-    hinoComAudio.audioUrl = `${baseUrl}/${hinoComAudio.audio}`;
+    hinoComAudio.audioUrl = hinoComAudio.audio;
+    delete hinoComAudio.audio;
   }
   
   res.json(hinoComAudio);
@@ -203,8 +202,8 @@ router.get('/autor/:autor', (req, res) => {
   const hinosComAudio = hinosDoAutor.map(hino => {
     const hinoComAudio = { ...hino };
     if (hinoComAudio.audio) {
-      const baseUrl = `${req.protocol}://${req.get('host')}`;
-      hinoComAudio.audioUrl = `${baseUrl}/${hinoComAudio.audio}`;
+      hinoComAudio.audioUrl = hinoComAudio.audio;
+      delete hinoComAudio.audio;
     }
     return hinoComAudio;
   });
@@ -240,8 +239,8 @@ router.get('/faixa/:inicio/:fim', (req, res) => {
   const hinosComAudio = hinosNaFaixa.map(hino => {
     const hinoComAudio = { ...hino };
     if (hinoComAudio.audio) {
-      const baseUrl = `${req.protocol}://${req.get('host')}`;
-      hinoComAudio.audioUrl = `${baseUrl}/${hinoComAudio.audio}`;
+      hinoComAudio.audioUrl = hinoComAudio.audio;
+      delete hinoComAudio.audio;
     }
     return hinoComAudio;
   });
@@ -251,6 +250,17 @@ router.get('/faixa/:inicio/:fim', (req, res) => {
     total: hinosComAudio.length,
     hinos: hinosComAudio
   });
+});
+
+// Endpoint para retornar nome, número e audioUrl dos hinos
+router.get('/lista-essencial', (req, res) => {
+  const hinosEssenciais = hinos.map(hino => ({
+    numero: hino.number,
+    nome: hino.title,
+    audioUrl: hino.audioUrl || null
+  }));
+  
+  res.json(hinosEssenciais);
 });
 
 module.exports = router; 
